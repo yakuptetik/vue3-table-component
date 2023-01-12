@@ -58,36 +58,36 @@ function handleAdd() {
         <div class="flex items-center justify-between gap-3">
           <div class="w-full">
             <label class="block" for="Name">
-              Ad
+              Name
             </label>
             <input
               v-model="newForm.name"
               type="text"
-              placeholder="Adı..."
+              placeholder="Name..."
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
             >
           </div>
 
           <div class="w-full">
             <label class="block" for="Surname">
-              Soyad
+              Surname
             </label>
             <input
               v-model="newForm.surname"
               type="text"
-              placeholder="Soyadı..."
+              placeholder="Surname..."
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
             >
           </div>
 
           <div class="w-full">
             <label class="block" for="lesson">
-              Seçmeli
+              Optional Lesson
             </label>
             <input
               v-model="newForm.lesson"
               type="text"
-              placeholder="Yaşı..."
+              placeholder="Optional Lesson..."
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
             >
           </div>
@@ -97,31 +97,31 @@ function handleAdd() {
         <div class="flex items-center justify-between gap-3 mt-3">
           <div class="w-full">
             <label class="block" for="age">
-              Yaşı
+              Age
             </label>
             <input
               v-model="newForm.age"
               type="number"
-              placeholder="Yaşı..."
+              placeholder="Age..."
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
             >
           </div>
 
           <div class="w-full ">
             <label class="block" for="lesson">
-              Bölümü
+              Faculty
             </label>
             <input
               v-model="newForm.faculty"
               type="text"
-              placeholder="Bölümü..."
+              placeholder="Faculty..."
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
             >
           </div>
 
           <div class="w-full">
             <label class="block" for="date">
-              Başlangıç tarihi
+              Start Date
             </label>
             <input
               v-model="newForm.date"

@@ -32,34 +32,34 @@ async function handleSubmit() {
 <template>
   <div class="flex  justify-center bg-gray-300">
     <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/2 sm:w-1/2 rounded-xl">
-      <h3 class="text-2xl font-bold text-center">Kayıt Formu</h3>
+      <h3 class="text-2xl font-bold text-center">Registration Form</h3>
       <form @submit.prevent="handleSubmit()">
         <div class="mt-4">
           <div class="flex items-center justify-between gap-3">
             <div class="w-full">
               <label class="block" for="Name">
-                Ad
+                Name
               </label>
 
               <input
                 v-model="form.name"
                 required
                 type="text"
-                placeholder="Adı..."
+                placeholder="Name..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
 
             <div class="w-full">
               <label class="block" for="Surname">
-                Soyad
+                Surname
               </label>
 
               <input
                 v-model="form.surname"
                 required
                 type="text"
-                placeholder="Soyadı..."
+                placeholder="Surname..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
@@ -68,28 +68,28 @@ async function handleSubmit() {
           <div class="flex items-center justify-between gap-3">
             <div class="mt-4 w-full">
               <label class="block" for="age">
-                Yaş
+                Age
               </label>
 
               <input
                 v-model.number="form.age"
                 required
                 type="number"
-                placeholder="Yaş..."
+                placeholder="Age..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
 
             <div class="mt-4 w-full">
               <label class="block" for="lesson">
-                Bölümü
+                Faculty
               </label>
 
               <input
                 v-model="form.faculty"
                 required
                 type="text"
-                placeholder="Bölümü..."
+                placeholder="Faculty..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
@@ -98,28 +98,28 @@ async function handleSubmit() {
           <div class="flex items-center justify-between gap-3">
             <div class="mt-4 w-full">
               <label class="block" for="age">
-                Öğrenci no
+                Student No
               </label>
 
               <input
                 v-model.number="form.studentNo"
                 required
                 type="number"
-                placeholder="Öğrenci no..."
+                placeholder="Student No..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
 
             <div class="mt-4 w-full">
               <label class="block" for="age">
-                Seçmeli ders
+                Optional Lesson
               </label>
 
               <input
                 v-model.number="form.lesson"
                 required
-                type="number"
-                placeholder="Öğrenci no..."
+                type="text"
+                placeholder="Optional Lesson..."
                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
             </div>
@@ -127,7 +127,7 @@ async function handleSubmit() {
 
           <div class="mt-4 w-full">
             <label class="block" for="date">
-              Başlangıç tarihi
+              Start Date
             </label>
 
             <input
@@ -156,7 +156,7 @@ async function handleSubmit() {
               </template>
 
               <template v-else>
-                Oluştur
+                Create
               </template>
             </button>
           </div>

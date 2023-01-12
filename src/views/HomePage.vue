@@ -13,13 +13,13 @@ const studentStore = useStudentStore();
           <table class="w-full rounded-tl-lg">
             <thead>
               <tr class="bg-gray-200 text-gray-600 uppercase text-sm rounded-t2xl">
-                <th class="py-3 px-6 text-center rounded-tl-xl">Adı</th>
-                <th class="py-3 px-6 text-center">Soyadı</th>
-                <th class="py-3 px-6 text-center">Yaşı</th>
-                <th class="py-3 px-6 text-center">Bölümü</th>
-                <th class="py-3 px-6 text-center">Öğrenci no</th>
-								<th class="py-3 px-6 text-center">Seçmeli ders</th>
-                <th class="py-3 px-6 text-center">Başlangıç tarİhi</th>
+                <th class="py-3 px-6 text-center rounded-tl-xl">name</th>
+                <th class="py-3 px-6 text-center">surname</th>
+                <th class="py-3 px-6 text-center">age</th>
+                <th class="py-3 px-6 text-center">faculty</th>
+                <th class="py-3 px-6 text-center">Student no</th>
+                <th class="py-3 px-6 text-center">OPTIONAL LESSON</th>
+                <th class="py-3 px-6 text-center">Start Date</th>
                 <th class="py-3 px-6 text-center rounded-tr-xl">actions</th>
               </tr>
             </thead>
