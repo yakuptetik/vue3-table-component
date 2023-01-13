@@ -4,7 +4,7 @@ export function createStudent(student, students) {
 			const isHaveStudent = students.findIndex(({ studentNo }) => studentNo === student.studentNo) >= 0;
 
 			if (isHaveStudent) {
-				throw new Error('Numaraya sahip öğrenci var');
+				throw new Error('Bu numaraya sahip öğrenci var');
 			}
 
 			setTimeout(() => {
@@ -12,6 +12,8 @@ export function createStudent(student, students) {
 			}, 2000);
 		} catch (err) {
 			reject(err);
+			// eslint-disable-next-line no-alert
+			alert(err.message);
 		}
 	});
 }

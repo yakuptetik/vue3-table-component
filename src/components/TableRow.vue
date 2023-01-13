@@ -31,50 +31,50 @@ function handleDelete(studentNo) {
 
 <template>
   <tr
-    class="border-b border-gray-200 hover:bg-gray-100 "
+    class="border-b border-gray-200 bg-white hover:bg-gray-100"
   >
-    <td class="py-3 px-6 text-center">
+    <td class="py-3 px-6 text-center whitespace-nowrap">
       <div class="flex items-center justify-center">
         {{ student.name }}
       </div>
     </td>
 
-    <td class="py-3 px-6 text-center">
+    <td class="py-3 px-6 text-center whitespace-nowrap">
       <div class="flex items-center justify-center">
         {{ student.surname }}
       </div>
     </td>
 
-    <td class="py-3 px-6 text-center whitespace-nowrap">
+    <td class="py-3 px-6 text-center whitespace-nowrap ">
       <div class="flex items-center justify-center">
         {{ student.age }}
       </div>
     </td>
-    <td class="py-3 px-6 text-center whitespace-nowrap">
+    <td class="py-3 px-6 text-center whitespace-nowrap ">
       <div class="flex items-center justify-center">
         {{ student.faculty }}
       </div>
     </td>
 
-    <td class="py-3 px-6 text-center whitespace-nowrap">
+    <td class="py-3 px-6 text-center whitespace-nowrap ">
       <div class="flex items-center justify-center">
         {{ student.studentNo }}
       </div>
     </td>
 
-    <td class="py-3 px-6 text-center whitespace-nowrap">
-      <div class="flex items-center justify-center">
+    <td class="py-3 px-6 text-center whitespace-nowrap ">
+      <div class="flex items-center justify-center ">
         {{ student.lesson }}
       </div>
     </td>
 
-    <td class="py-3 px-6 text-center">
+    <td class="py-3 px-6 text-center whitespace-nowrap">
       <div class="flex items-center justify-center">
         {{ student.date }}
       </div>
     </td>
 
-    <td class="py-3 px-6 ">
+    <td class="py-3 px-6 whitespace-nowrap">
       <div class="flex item-center justify-center">
         <div @click="isModalShow = true" @keypress="isModalShow = true" class="w-4 mr-2 transform hover:text-green-600 hover:scale-110">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

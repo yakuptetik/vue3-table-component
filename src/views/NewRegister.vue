@@ -21,9 +21,9 @@ async function handleSubmit() {
 	await studentStore.addStudent({ ...form.value })
 		.then(() => {
 		})
-		.catch(() => {
+		.catch((err) => {
 			// eslint-disable-next-line no-alert
-			window.alert('dwefrgthythrgef');
+			alert(err.message);
 		});
 	isLoading.value = false;
 }
@@ -156,7 +156,9 @@ async function handleSubmit() {
               </template>
 
               <template v-else>
-                Create
+                <div class="text-base">
+                  Create
+                </div>
               </template>
             </button>
           </div>

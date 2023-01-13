@@ -23,7 +23,7 @@ export const useStudentStore = defineStore('student', () => {
 						resolve();
 					});
 			}	catch (err) {
-				reject(err.message);
+				reject(err);
 			}
 		});
 	}

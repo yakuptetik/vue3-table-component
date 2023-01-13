@@ -61,6 +61,7 @@ function handleAdd() {
               Name
             </label>
             <input
+              required
               v-model="newForm.name"
               type="text"
               placeholder="Name..."
@@ -73,6 +74,7 @@ function handleAdd() {
               Surname
             </label>
             <input
+              required
               v-model="newForm.surname"
               type="text"
               placeholder="Surname..."
@@ -85,6 +87,7 @@ function handleAdd() {
               Optional Lesson
             </label>
             <input
+              required
               v-model="newForm.lesson"
               type="text"
               placeholder="Optional Lesson..."
@@ -100,6 +103,7 @@ function handleAdd() {
               Age
             </label>
             <input
+              required
               v-model="newForm.age"
               type="number"
               placeholder="Age..."
@@ -112,6 +116,7 @@ function handleAdd() {
               Faculty
             </label>
             <input
+						required
               v-model="newForm.faculty"
               type="text"
               placeholder="Faculty..."
@@ -124,6 +129,7 @@ function handleAdd() {
               Start Date
             </label>
             <input
+							required
               v-model="newForm.date"
               type="date"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
@@ -153,7 +159,7 @@ function handleAdd() {
 
             <template v-else>
               <div role="status" class="flex items-center justify-center text-white text-md space-x-2">
-                <span class=" text-white">Kaydet</span>
+                <span class=" text-white h-6 flex items-center">Kaydet</span>
               </div>
             </template>
           </div>
