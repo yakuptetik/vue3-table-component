@@ -46,7 +46,7 @@ function handleAdd() {
 <template>
   <div class="flex justify-center bg-[#00000086] fixed items-center top-0 bottom-0 right-0 left-0 z-30" @click="$emit('close-modal')" @keypress="'close-modal'">
     <form class="bg-white p-4  mx-4 rounded-xl" @submit.prevent="handleAdd()" @click.stop>
-      <div class="font-medium text-lg text-black"> {{ student.studentNo }} Numaralı Öğrenciyi Güncelle</div>
+      <div class="font-medium text-lg text-black">Update Student {{ student.studentNo }} </div>
 
       <div class="relative flex items-center ">
         <div class="cursor-pointer absolute right-0" @click="$emit('close-modal')" @keypress="'close-modal'">
