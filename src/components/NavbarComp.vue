@@ -1,4 +1,6 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+<script setup>
+
+</script>
 <template>
   <div class=" bg-gray-300  flex items-center justify-center gap-10 h-20">
     <router-link
@@ -13,6 +15,5 @@
       active-class="text-blue-600 border-b-blue-600 border-b border-t-transparent border-t">
       New Register
     </router-link>
-
   </div>
 </template>

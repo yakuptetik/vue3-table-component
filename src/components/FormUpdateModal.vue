@@ -45,7 +45,7 @@ function handleAdd() {
 </script>
 <template>
   <div class="flex justify-center bg-[#00000086] fixed items-center top-0 bottom-0 right-0 left-0 z-30" @click="$emit('close-modal')" @keypress="'close-modal'">
-    <form class="bg-white p-4  mx-4 rounded-xl" @submit.prevent="handleAdd()" @click.stop>
+    <form @submit.prevent="handleAdd()" class="bg-white p-4  mx-4 rounded-xl" @click.stop>
       <div class="font-medium text-lg text-black">Update Student {{ student.studentNo }} </div>
 
       <div class="relative flex items-center ">
@@ -116,7 +116,7 @@ function handleAdd() {
               Faculty
             </label>
             <input
-						required
+              required
               v-model="newForm.faculty"
               type="text"
               placeholder="Faculty..."
@@ -129,7 +129,7 @@ function handleAdd() {
               Start Date
             </label>
             <input
-							required
+              required
               v-model="newForm.date"
               type="date"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
@@ -139,7 +139,7 @@ function handleAdd() {
         </div>
       </div>
       <div class="relative flex items-center pt-3">
-        <button @click="handleAdd()" @keypress="handleAdd()" type="submit" class="cursor-pointer pt-3 absolute right-0 bottom-0">
+        <button type="submit" class="cursor-pointer pt-3 absolute right-0 bottom-0">
           <div class="bg-blue-600 hover:bg-blue-800  rounded-lg px-3 py-1 text-white ">
             <template v-if="isEnterLoading">
               <div role="status" class="flex items-center justify-center text-white text-md space-x-2">

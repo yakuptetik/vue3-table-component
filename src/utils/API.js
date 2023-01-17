@@ -46,4 +46,6 @@ export function updateStudent(student, students) {
 	});
 }
 
-export default { deleteStudent, createStudent, updateStudent };
+export default {
+	deleteStudent, createStudent, updateStudent,
+};

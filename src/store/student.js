@@ -6,6 +6,15 @@ import API from '../utils/API';
 export const useStudentStore = defineStore('student', () => {
 	const students = ref([]);
 
+	function filteredStudents(search) {
+		if (students.value && search) {
+			// eslint-disable-next-line vue/max-len
+			return students.value.filter((student) => student.name.toLowerCase().includes(search.toLowerCase()) || student.surname.toLowerCase().includes(search.toLowerCase()) || student.lesson.toLowerCase().includes(search.toLowerCase()) || student.faculty.toLowerCase().includes(search.toLowerCase()) || student.age.toString().toLowerCase().includes(search.toLowerCase()) || student.studentNo.toString().toLowerCase().includes(search.toLowerCase()));
+		}
+
+		return students.value;
+	}
+
 	function addStudent(student) {
 		return new Promise((resolve, reject) => {
 			try {
@@ -75,7 +84,15 @@ export const useStudentStore = defineStore('student', () => {
 		});
 	}
 
+	function sortStudent(sortValues) {
+		if (!sortValues.desc) {
+			students.value.sort((a, b) => (a.name > b.name ? 1 : -1));
+		} else {
+			students.value.sort((a, b) => (a.name > b.name ? -1 : 1));
+		}
+	}
+
 	return {
-		students, addStudent, deleteStudent, updateStudent,
+		students, addStudent, deleteStudent, updateStudent, sortStudent, filteredStudents,
 	};
 });

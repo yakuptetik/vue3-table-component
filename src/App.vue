@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from './components/Navbar.vue';
+import Navbar from './components/NavbarComp.vue';
 import { useStudentStore } from './store/student';
 
 const studentStore = useStudentStore();

@@ -13,6 +13,7 @@ defineProps({
 		required: true,
 		type: Object,
 	},
+
 });
 
 function handleDelete(studentNo) {
@@ -114,4 +115,5 @@ function handleDelete(studentNo) {
 
     <FormUpdateModal :student="{ ...student }" v-if="isModalShow" @close-modal="isModalShow = false" />
   </tr>
+
 </template>
