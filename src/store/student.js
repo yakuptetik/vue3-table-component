@@ -86,9 +86,9 @@ export const useStudentStore = defineStore('student', () => {
 
 	function sortStudent(sortValues) {
 		if (!sortValues.desc) {
-			students.value.sort((a, b) => (a.name > b.name ? 1 : -1));
+			students.value.sort((a, b) => (a[sortValues.type] > b[sortValues.type] ? 1 : -1));
 		} else {
-			students.value.sort((a, b) => (a.name > b.name ? -1 : 1));
+			students.value.sort((a, b) => (a[sortValues.type] > b[sortValues.type] ? -1 : 1));
 		}
 	}
 
