@@ -8,8 +8,12 @@ export const useStudentStore = defineStore('student', () => {
 
 	function filteredStudents(search) {
 		if (students.value && search) {
-			// eslint-disable-next-line vue/max-len
-			return students.value.filter((student) => student.name.toLowerCase().includes(search.toLowerCase()) || student.surname.toLowerCase().includes(search.toLowerCase()) || student.lesson.toLowerCase().includes(search.toLowerCase()) || student.faculty.toLowerCase().includes(search.toLowerCase()) || student.age.toString().toLowerCase().includes(search.toLowerCase()) || student.studentNo.toString().toLowerCase().includes(search.toLowerCase()));
+			return students.value.filter((student) => student.name.toLowerCase().includes(search.toLowerCase())
+				|| student.surname.toLowerCase().includes(search.toLowerCase())
+				|| student.lesson.toLowerCase().includes(search.toLowerCase())
+				|| student.faculty.toLowerCase().includes(search.toLowerCase())
+				|| student.age.toString().toLowerCase().includes(search.toLowerCase())
+				|| student.studentNo.toString().toLowerCase().includes(search.toLowerCase()));
 		}
 
 		return students.value;
@@ -22,14 +26,11 @@ export const useStudentStore = defineStore('student', () => {
 				API.createStudent(student, students.value)
 					.then((response) => {
 						students.value.push(response.data);
-
 						localStorage.setItem('students', JSON.stringify(students.value));
+						resolve();
 					})
 					.catch((err) => {
-						throw new Error(err);
-					})
-					.finally(() => {
-						resolve();
+						reject(err);
 					});
 			}	catch (err) {
 				reject(err);
@@ -46,10 +47,8 @@ export const useStudentStore = defineStore('student', () => {
 						if (response.data < 0) {
 							throw new Error('Öğrenci bulunamadı');
 						}
-
 						students.value.splice(response.data, 1);
 						localStorage.setItem('students', JSON.stringify(students.value));
-
 						resolve();
 					})
 					.catch((err) => {
@@ -70,7 +69,6 @@ export const useStudentStore = defineStore('student', () => {
 						if (response.data < 0) {
 							throw new Error('Öğrenci bulunamadı');
 						}
-
 						students.value.splice(response.data, 1, student);
 						localStorage.setItem('students', JSON.stringify(students.value));
 						resolve();

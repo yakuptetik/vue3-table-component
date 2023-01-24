@@ -24,8 +24,6 @@ function handleDelete(studentNo) {
 			isDeleteLoading.value = false;
 		})
 		.catch(() => {
-			// eslint-disable-next-line no-alert
-			window.alert('dwefrgthythrgef');
 		});
 }
 </script>

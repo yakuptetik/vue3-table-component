@@ -12,8 +12,6 @@ export function createStudent(student, students) {
 			}, 2000);
 		} catch (err) {
 			reject(err);
-			// eslint-disable-next-line no-alert
-			alert(err.message);
 		}
 	});
 }

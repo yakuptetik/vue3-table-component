@@ -15,17 +15,27 @@ const form = ref({
 
 const isLoading = ref(false);
 
-async function handleSubmit() {
+function handleSubmit() {
 	isLoading.value = true;
 
-	await studentStore.addStudent({ ...form.value })
+	studentStore.addStudent({ ...form.value })
 		.then(() => {
+			form.value = {
+				name: '',
+				surname: '',
+				age: '',
+				date: '',
+				faculty: '',
+				lesson: '',
+				studentNo: '',
+			};
 		})
 		.catch((err) => {
 			// eslint-disable-next-line no-alert
 			alert(err.message);
+		}).finally(() => {
+			isLoading.value = false;
 		});
-	isLoading.value = false;
 }
 
 </script>
@@ -33,7 +43,7 @@ async function handleSubmit() {
   <div class="flex  justify-center bg-gray-300">
     <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/2 sm:w-1/2 rounded-xl">
       <h3 class="text-2xl font-bold text-center">Registration Form</h3>
-      <form @submit.prevent="handleSubmit()">
+      <form @submit.prevent="handleSubmit">
         <div class="mt-4">
           <div class="flex items-center justify-between gap-3">
             <div class="w-full">

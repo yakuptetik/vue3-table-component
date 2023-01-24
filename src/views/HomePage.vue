@@ -20,6 +20,7 @@ function handleSort(type) {
 	} else {
 		sort.value.desc = !sort.value.desc;
 	}
+
 	studentStore.sortStudent(sort.value);
 }
 
